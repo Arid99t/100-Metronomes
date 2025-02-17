@@ -61,9 +61,11 @@
     <Analyzer Include="D:\6000.0.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\MetronomeLightController.cs" />
     <Compile Include="Assets\scripts\startmenu\AudioOnly.cs" />
     <Compile Include="Assets\scripts\EnsembleModel.cs" />
     <Compile Include="Assets\scripts\UserTimeManager.cs" />
+    <Compile Include="Assets\scripts\SyncCalculatorIndividual.cs" />
     <Compile Include="Assets\scripts\AutoPlayer.cs" />
     <Compile Include="Assets\scripts\AudioInputDetector.cs" />
     <Compile Include="Assets\scripts\InputChecker.cs" />
