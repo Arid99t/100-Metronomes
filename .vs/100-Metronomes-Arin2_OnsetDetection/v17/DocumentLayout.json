@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{DF772562-D0D5-642E-0BA7-1B6BF28612E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\metronomelightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF772562-D0D5-642E-0BA7-1B6BF28612E3}|Assembly-CSharp.csproj|d:\\unity projects\\100-metronomes-arin2_onsetdetection\\assets\\scripts\\synccalculatorindividual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF772562-D0D5-642E-0BA7-1B6BF28612E3}|Assembly-CSharp.csproj|D:\\Unity Projects\\100-Metronomes-Arin2_OnsetDetection\\assets\\scripts\\synccalculatorindividual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF772562-D0D5-642E-0BA7-1B6BF28612E3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\synccalculatorindividual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "Assets\\scripts\\MetronomeLightController.cs",
               "ToolTip": "D:\\Unity Projects\\100-Metronomes-Arin2_OnsetDetection\\Assets\\scripts\\MetronomeLightController.cs",
               "RelativeToolTip": "Assets\\scripts\\MetronomeLightController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAH8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T05:50:25.62Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "Assets\\scripts\\SyncCalculatorIndividual.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAowIkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T04:51:06.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T04:51:06.736Z"
             },
             {
               "$type": "Document",
