@@ -260,6 +260,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6225816318827270275, guid: 615e340e91e6a5d419d0876c70fe11c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6993145404143950043}
+    - targetCorrespondingSourceObject: {fileID: -6225816318827270275, guid: 615e340e91e6a5d419d0876c70fe11c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8567148088466811098}
   m_SourcePrefab: {fileID: 100100000, guid: 615e340e91e6a5d419d0876c70fe11c5, type: 3}
 --- !u!4 &6051806225585484491 stripped
 Transform:
@@ -341,5 +344,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3f93690d6f9f549a48beeefac59e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultClick: {fileID: 0}
+  defaultClick: {fileID: 8300000, guid: 212eb34b6ab5f794680d24fbf260c6b2, type: 3}
   clickpitch: 1
+--- !u!114 &8567148088466811098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074640843620498013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96af3ca346b328f46b004306ae8af49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 100
+  minDistance: 0.1
+  baseVolume: 1
+  basePitch: 1
+  maxPitchIncrease: 0.15
+  volumeDropoff: 2

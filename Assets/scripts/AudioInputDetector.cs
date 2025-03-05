@@ -9,16 +9,23 @@ public class AudioInputDetector : MonoBehaviour
     private bool isInitialized = false;
     private const int FREQUENCY = 44100;
     private const int BUFFER_SIZE = 1024;
-    private const float BASE_THRESHOLD = 0.08f;  // base threshold
-    private const float MIN_INTERVAL = 0.25f;
+    private const float BASE_THRESHOLD = 0.07f;  // Lower threshold for better sensitivity
+    private float MIN_INTERVAL = 0.2f;          // Shortened to ~300 BPM max (0.2s = 5Hz)
     private const int NOISE_SAMPLE_SIZE = 30;
-    private const float SPIKE_THRESHOLD = 1.8f;  // Threshold for sudden amplitude increases
+    private const float SPIKE_THRESHOLD = 1.5f;  // More sensitive
 
     private float lastClapTime = 0f;
     private Queue<float> noiseHistory;
     private float adaptiveThreshold;
     private float[] previousSamples;
     private float previousMaxAmplitude = 0f;
+
+    // Optimized fields
+    private bool UseFrequencyAnalysis = true;
+    private float[] spectrum = new float[256];
+    private float[] amplitudeHistory = new float[5];
+    private int amplitudeHistoryIndex = 0;
+    private List<float> interClapIntervals = new List<float>();
 
     public static AudioInputDetector Instance { get; private set; }
 
@@ -42,6 +49,10 @@ public class AudioInputDetector : MonoBehaviour
         adaptiveThreshold = BASE_THRESHOLD;
         previousSamples = new float[BUFFER_SIZE];
 
+        // Initialize amplitude history
+        for (int i = 0; i < amplitudeHistory.Length; i++)
+            amplitudeHistory[i] = 0f;
+
         if (Microphone.devices.Length > 0)
         {
             microphoneName = Microphone.devices[0];
@@ -50,7 +61,7 @@ public class AudioInputDetector : MonoBehaviour
             while (!(Microphone.GetPosition(microphoneName) > 0)) { }
 
             isInitialized = true;
-            Debug.Log($"Noise-resistant clap detector initialized: {microphoneName}");
+            Debug.Log($"High-tempo clap detector initialized: {microphoneName}");
 
             StartCoroutine(CalibrateNoiseFloor());
         }
@@ -119,8 +130,8 @@ public class AudioInputDetector : MonoBehaviour
             }
             avgNoise /= NOISE_SAMPLE_SIZE;
 
-            // Set threshold relative to noise floor
-            adaptiveThreshold = Mathf.Max(BASE_THRESHOLD, avgNoise * 4f);
+            // Set threshold relative to noise floor, moderate multiplier
+            adaptiveThreshold = Mathf.Max(BASE_THRESHOLD, avgNoise * 3.0f);
         }
     }
 
@@ -160,14 +171,72 @@ public class AudioInputDetector : MonoBehaviour
             UpdateNoiseFloor();
         }
 
-        // Detect claps using both amplitude threshold and spike detection
-        bool amplitudeThresholdMet = maxAmplitude > adaptiveThreshold;
-        bool spikeDetected = maxAmplitude > previousMaxAmplitude * SPIKE_THRESHOLD;
+        // Shift in new amplitude to history
+        amplitudeHistory[amplitudeHistoryIndex] = maxAmplitude;
+        amplitudeHistoryIndex = (amplitudeHistoryIndex + 1) % amplitudeHistory.Length;
 
-        if (amplitudeThresholdMet && spikeDetected && Time.time - lastClapTime > MIN_INTERVAL)
+        // Dynamically adjust MIN_INTERVAL based on rhythm
+        if (interClapIntervals.Count >= 2)
         {
-            lastClapTime = Time.time;
-            Debug.Log($"CLAP DETECTED! Amplitude: {maxAmplitude:F3}, Threshold: {adaptiveThreshold:F3}");
+            // Calculate average interval from recent claps
+            float sum = 0;
+            foreach (float interval in interClapIntervals)
+                sum += interval;
+            float avgInterval = sum / interClapIntervals.Count;
+
+            // Set minimum interval to allow detection slightly before expected clap
+            // This helps with faster tempos
+            MIN_INTERVAL = Mathf.Min(0.2f, Mathf.Max(0.1f, avgInterval * 0.4f));
+        }
+
+        // Basic amplitude check - must exceed noise threshold
+        bool amplitudeCheck = maxAmplitude > adaptiveThreshold * 0.75f;
+
+        // Timing check - must be at least MIN_INTERVAL since last clap
+        bool timingCheck = Time.time - lastClapTime > MIN_INTERVAL;
+
+        // Short-term increase check - must be a spike compared to recent samples
+        bool spikeCheck = maxAmplitude > previousMaxAmplitude * SPIKE_THRESHOLD;
+
+        // If basic checks pass, do more detailed analysis
+        if (amplitudeCheck && timingCheck)
+        {
+            bool isClap = false;
+
+            // Strong signal - definitely a clap
+            if (maxAmplitude > adaptiveThreshold * 1.5f && spikeCheck)
+            {
+                isClap = true;
+            }
+            // Medium signal - check frequency profile
+            else if (maxAmplitude > adaptiveThreshold && UseFrequencyAnalysis)
+            {
+                AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris);
+
+                float midFreqEnergy = 0;
+                for (int i = 20; i < 80; i++) midFreqEnergy += spectrum[i];
+
+                // Claps have distinctive mid-frequency energy
+                if (midFreqEnergy > 0.005f)
+                {
+                    isClap = true;
+                }
+            }
+
+            if (isClap)
+            {
+                // Update inter-clap intervals for rhythm tracking
+                float currentInterval = Time.time - lastClapTime;
+                if (lastClapTime > 0 && currentInterval < 2.0f) // Only store reasonable intervals
+                {
+                    interClapIntervals.Add(currentInterval);
+                    if (interClapIntervals.Count > 8)
+                        interClapIntervals.RemoveAt(0);
+                }
+
+                lastClapTime = Time.time;
+                Debug.Log($"CLAP DETECTED! Amplitude: {maxAmplitude:F3}, Threshold: {adaptiveThreshold:F3}");
+            }
         }
 
         previousMaxAmplitude = maxAmplitude;
