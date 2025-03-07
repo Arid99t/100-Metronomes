@@ -11,7 +11,7 @@ public class StartMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         UserTimeManager.Instance.clearTimestamps();
-        GuideManager.Instance.ReloadChildObject();
+        //GuideManager.Instance.ReloadChildObject();
 
         // Get reference to EnsembleModel
         ensembleModel = FindAnyObjectByType<EnsembleModel>();

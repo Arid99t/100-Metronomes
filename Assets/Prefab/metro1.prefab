@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7067557597685507489
 Transform:
   m_ObjectHideFlags: 0
@@ -42,8 +42,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.8396226, g: 0.7089267, b: 0.35248306, a: 1}
-  m_Intensity: 3
+  m_Color: {r: 0.9716981, g: 0.8005265, b: 0.49043253, a: 1}
+  m_Intensity: 1
   m_Range: 5.02
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -281,12 +281,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6392724561568557169}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 146258de348eb534aabf1f07f228dcd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncThreshold: 70
 --- !u!1 &9074640843620498013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6225816318827270275, guid: 615e340e91e6a5d419d0876c70fe11c5, type: 3}
@@ -358,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96af3ca346b328f46b004306ae8af49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 100
+  maxDistance: 35
   minDistance: 0.1
   baseVolume: 1
   basePitch: 1
