@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Unity Projects\\New folder\\100-Metronomes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|D:\\Unity Projects\\New folder\\100-Metronomes\\assets\\scripts\\audioinputdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audioinputdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|d:\\unity projects\\new folder\\100-metronomes\\assets\\scripts\\usertimemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\usertimemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\startmenu\\startmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|d:\\unity projects\\new folder\\100-metronomes\\assets\\scripts\\startmenu\\guidemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|D:\\Unity Projects\\New folder\\100-Metronomes\\assets\\scripts\\startmenu\\guidemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\startmenu\\guidemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,12 +27,8 @@
       "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|d:\\unity projects\\new folder\\100-metronomes\\assets\\scripts\\metronomelightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|D:\\Unity Projects\\New folder\\100-Metronomes\\assets\\scripts\\metronomelightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\metronomelightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|D:\\Unity Projects\\New folder\\100-Metronomes\\assets\\scripts\\audioinputdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE398286-3D9D-1880-804F-8C5509D140FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audioinputdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserTimeManager.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\UserTimeManager.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\UserTimeManager.cs",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GuideManager.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\startmenu\\GuideManager.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\startmenu\\GuideManager.cs",
@@ -67,12 +67,11 @@
               "RelativeToolTip": "Assets\\scripts\\startmenu\\GuideManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T03:41:00.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T03:41:00.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MetronomeLightController.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\MetronomeLightController.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\MetronomeLightController.cs",
@@ -80,12 +79,11 @@
               "RelativeToolTip": "Assets\\scripts\\MetronomeLightController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAAwDIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T21:40:29.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T21:40:29.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ScoreUI.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\ScoreUI.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\ScoreUI.cs",
@@ -93,24 +91,24 @@
               "RelativeToolTip": "Assets\\scripts\\ScoreUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:16:47.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T04:16:47.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "AudioInputDetector.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\AudioInputDetector.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\AudioInputDetector.cs",
               "ToolTip": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\AudioInputDetector.cs",
               "RelativeToolTip": "Assets\\scripts\\AudioInputDetector.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAADwvwMBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:07:21.999Z"
+              "WhenOpened": "2025-03-05T04:07:21.999Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EnsembleModel.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\EnsembleModel.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\EnsembleModel.cs",
@@ -118,12 +116,11 @@
               "RelativeToolTip": "Assets\\scripts\\EnsembleModel.cs",
               "ViewState": "AgIAAIMAAAAAAAAAAADwv4sAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T03:58:02.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T03:58:02.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StartMenu.cs",
               "DocumentMoniker": "D:\\Unity Projects\\New folder\\100-Metronomes\\Assets\\scripts\\startmenu\\StartMenu.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\startmenu\\StartMenu.cs",
@@ -131,8 +128,7 @@
               "RelativeToolTip": "Assets\\scripts\\startmenu\\StartMenu.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwCoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T03:09:24.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T03:09:24.311Z"
             }
           ]
         }

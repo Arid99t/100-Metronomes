@@ -12,7 +12,7 @@ public class AudioInputDetector : MonoBehaviour
     private const float BASE_THRESHOLD = 0.07f;  // Lower threshold for better sensitivity
     private float MIN_INTERVAL = 0.2f;          // Shortened to ~300 BPM max (0.2s = 5Hz)
     private const int NOISE_SAMPLE_SIZE = 30;
-    private const float SPIKE_THRESHOLD = 1.5f;  // More sensitive
+    private const float SPIKE_THRESHOLD = 1.0f;  // More sensitive
 
     private float lastClapTime = 0f;
     private Queue<float> noiseHistory;
